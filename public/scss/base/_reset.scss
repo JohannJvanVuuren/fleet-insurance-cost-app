@@ -1,0 +1,25 @@
+/* Import to enable use of variables */
+@import '../abstract/variables';
+
+/* Global reset */
+*,
+::after,
+::before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Setting font-size to 1rem = 10px for ease of use */
+html {
+  font-size: 62.5%;
+}
+
+/* Global styling of the body element of the views */
+body {
+  padding: 50px;
+  font-family: 'Lato', Helvetica, Arial, sans-serif;
+  font-size: 2.5rem;
+  background-color: $dark-blue;
+  color: $misty-blue;
+}
