@@ -4,3 +4,8 @@
 /* Import of SCSS files for preprocessor to generate the main.css file and main.css.map */
 
 @import 'base/reset';
+@import 'base/typography';
+
+@import 'components/indexjs';
+
+@import 'layout/indexjs';

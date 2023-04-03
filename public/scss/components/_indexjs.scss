@@ -1,0 +1,18 @@
+@import '../abstract/variables';
+
+.index-container {
+  input {
+    background: $misty-blue;
+    border-radius: 1rem;
+    box-shadow: 1rem 1rem 3rem $dark-shadow,
+  -0.8rem -0.8rem 3rem $middle-blue;
+    border: none;
+  }
+
+  .result-box {
+    background: $misty-blue;
+    box-shadow: 1rem 1rem 3rem $dark-shadow,
+    -0.8rem -0.8rem 3rem $middle-blue;
+  }
+
+}

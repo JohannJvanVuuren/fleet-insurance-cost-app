@@ -9,20 +9,24 @@ const assert = require('assert');
 
 /* Mocha test to ensure the default functionality created for http://localhost:300/users work as expected */
 /* The describe() functions to group tests together and describes what is being tested*/
-describe('Status and content', function() {
-    describe ('Users page', function() {
-        /* The it() functions describe the actual test and contains the code needed to execute the test */
-        it('status', function(done){
+describe('Status and content', () => {
+    describe ('Users page', () => {
+        /* The it() function that contains the code to execute to test if the status received back from
+        * a call to the url below is 200 (I.e., success) */
+        it('status', (done) =>{
             request('http://localhost:3000/users',
-                function(error, response, body) {
+                (error, response, body) => {
                     /* Chai's expect assertion style used together with assert() below */
                     expect(response.statusCode).to.equal(200);
                     done();
                 });
         });
-        it('content', function(done) {
+
+        /* The it() function containing the code to execute to check that the information in the body of
+        * a call to the url below is correct */
+        it('content', (done) => {
             request('http://localhost:3000/users',
-                function(error, response, body) {
+                (error, response, body) => {
                     expect(body).to.equal('respond with a resource');
                     done();
                 });

@@ -4,6 +4,7 @@
 /* Import to enable use of variables */ /* Color schema */
 /* Blues */
 /* Reds */
+/* Shadows */
 /* Global reset */
 *,
 ::after,
@@ -25,6 +26,81 @@ body {
   font-size: 2.5rem;
   background-color: #000015;
   color: #C6C6FF;
+  position: relative;
+}
+
+/* Color schema */
+/* Blues */
+/* Reds */
+/* Shadows */
+.index-container .heading-title {
+  font-size: 6rem;
+  font-weight: 100;
+  text-transform: uppercase;
+}
+.index-container p {
+  font-size: 2rem;
+}
+.index-container label {
+  font-size: 3rem;
+  font-weight: 100;
+  text-transform: uppercase;
+}
+.index-container input {
+  font-size: 2rem;
+  font-weight: 300;
+  text-align: center;
+  text-transform: uppercase;
+}
+.index-container ::placeholder {
+  color: rgba(0, 0, 0, 0.2);
+}
+.index-container .heading-results {
+  margin-top: 4rem;
+  font-size: 2rem;
+  color: #770000;
+  text-transform: uppercase;
+}
+
+/* Color schema */
+/* Blues */
+/* Reds */
+/* Shadows */
+.index-container input {
+  background: #C6C6FF;
+  border-radius: 1rem;
+  box-shadow: 1rem 1rem 3rem rgba(0, 0, 0, 0.8), -0.8rem -0.8rem 3rem #00003D;
+  border: none;
+}
+.index-container .result-box {
+  background: #C6C6FF;
+  box-shadow: 1rem 1rem 3rem rgba(0, 0, 0, 0.8), -0.8rem -0.8rem 3rem #00003D;
+}
+
+.global-container {
+  margin-top: 10rem;
+}
+.global-container .index-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.global-container .index-container .form-kilometers {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.global-container .index-container input {
+  outline: none;
+  padding: 2rem;
+  margin: 3rem 0;
+  width: 25%;
+}
+.global-container .index-container .result-box {
+  width: 18rem;
+  height: 7rem;
+  margin: 3rem auto;
+  border-radius: 1rem;
 }
 
 /*# sourceMappingURL=main.css.map */

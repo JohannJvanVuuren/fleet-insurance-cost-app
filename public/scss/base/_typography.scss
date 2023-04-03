@@ -1,0 +1,45 @@
+@import '../abstract/variables';
+
+.index-container {
+
+  .heading-title {
+    font-size: 6rem;
+    font-weight: 100;
+    text-transform: uppercase;
+  }
+
+  p {
+    font-size: 2rem;
+  }
+
+  label {
+    font-size: 3rem;
+    font-weight: 100;
+    text-transform: uppercase;
+  }
+
+  input {
+    font-size: 2rem;
+    font-weight: 300;
+    text-align: center;
+    text-transform: uppercase;
+
+
+  }
+
+  ::placeholder {
+      color: $light-shadow;
+  }
+
+  .result-box {
+
+  }
+
+  .heading-results {
+    margin-top: 4rem;
+    font-size: 2rem;
+    color: $middle-red;
+    text-transform: uppercase;
+  }
+
+}

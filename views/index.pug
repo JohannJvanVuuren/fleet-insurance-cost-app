@@ -1,5 +1,21 @@
 extends layout
 
 block content
-  h1= title
-  p Welcome to #{title}
+  div.global-container
+    div.index-container
+      h1.heading-title= title
+      p This application calculates the total fleet insurance cost based on the individual kilometers driven entered.
+      form(
+        class='form-kilometers'
+      )
+        label(for='kilometers') Individual Vehicle Kilometers Driven (X to stop)
+        input(
+          type='text'
+          id='kilometers'
+          class='form-input'
+          placeholder='Kilometers'
+        )
+      h1.heading-results Total Insurance Due
+      div.result-box
+        h2= result
+
