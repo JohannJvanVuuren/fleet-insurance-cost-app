@@ -8,9 +8,9 @@ const request = require('request');
 const assert = require('assert');
 
 /* Import of function to be tested */
-const calculateInsurance = require('../public/javascripts/calculateInsuranceCost');
+const calculateInsurance = require('../controllers/fleetInsuranceCalculator');
 
-/* Mocha test to ensure the default functionality created for the calculateInsuranceCost.js module work as expected */
+/* Mocha test to ensure the default functionality created for the fleetInsuranceCalculator.js module work as expected */
 /* The describe() function to group tests together and describe what they do */
 describe('calculateInsurance()', () => {
     /* The it() function to describe the actual test and the code needed to execute the test */
