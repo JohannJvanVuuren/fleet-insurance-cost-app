@@ -13,9 +13,9 @@ const calculateIndividualVehicleCost = (kilometersDriven) => {
 }
 
 const addVehicleCostToArray = (req, res, next) => {
-    individualVehicleCostArray.push(calculateIndividualVehicleCost(req.body.kilometers));
 
-    res.json({message: 'POST add vehicle cost to the array'})
+    individualVehicleCostArray.push(calculateIndividualVehicleCost(req.body.kilometers))
+    res.json({message: individualVehicleCostArray})
 }
 
 module.exports = { addVehicleCostToArray };

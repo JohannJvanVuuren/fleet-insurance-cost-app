@@ -13,7 +13,7 @@ const bodyParser = require('body-parser');
 /* Dummy pages to show the use of routing */
 const indexRouter = require('./routes/index');
 const usersRouter = require('./routes/users');
-const addVehicleRouter = require('./routes/individualVehicle');
+const individualVehicleRouter = require('./routes/individualVehicle');
 
 const app = express();
 
@@ -38,7 +38,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 * seperated from app.js to keep this file lean and to the point */
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
-app.use('/', addVehicleRouter);
+app.use('/', individualVehicleRouter);
 
 
 
