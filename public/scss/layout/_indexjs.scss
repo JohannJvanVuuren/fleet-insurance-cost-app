@@ -1,31 +1,62 @@
+/* Layout of the global container */
 .global-container {
 
-  margin-top: 10rem;
+  /* Setting a margin from the top of the viewport */
+  margin-top: 8rem;
 
+  /* Layout of the main container of the elements of the main index.pug view */
   .index-container {
+    align-items: center;
     display: flex;
     flex-direction: column;
-    align-items: center;
 
+    /* Layout of the main form that takes in the individual kilometers per vehicle */
     .form-kilometers {
-      display: flex;
-      flex-direction: column;
       align-items: center;
+      display: flex;
+      justify-content: space-between;
+
+      /* Layout and positioning of the main input field */
+      input {
+        margin: 3rem 0.5rem;
+        outline: none;
+        padding: 1rem 1.5rem;
+        text-align: center;
+        width: 35rem;
+      }
+
+      /* Sizing of the submit button */
+      .button-submit {
+        width: 10rem;
+      }
     }
 
-    input {
-      outline: none;
-      padding: 2rem;
-      margin: 3rem 0;
-      width: 25%;
+    .buttons-executive {
+
+      display: flex;
+      width: 20rem;
+      justify-content: space-around;
+      align-items: center;
+
+      /* Sizing of the calculate button used to trigger a GET request to get the total fleet cost */
+      .button-calculate {
+        padding: 1rem;
+      }
+
+      .button-delete {
+        padding: 1rem;
+      }
     }
 
+    /* Layout, positioning and sizing of the end result field */
     .result-box {
-      width: 18rem;
-      height: 7rem;
-      margin:3rem auto;
+      align-items: center;
       border-radius: 1rem;
+      display: flex;
+      height: 7rem;
+      justify-content: center;
+      margin: 3rem auto;
+      width: 18rem;
     }
-
   }
 }

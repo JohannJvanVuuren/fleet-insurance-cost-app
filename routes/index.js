@@ -1,3 +1,5 @@
+/* This router determines the view that the users sees when navigating to the entry server port */
+
 /* Importing the Express module required in this route */
 const express = require('express');
 
@@ -6,7 +8,9 @@ const router = express.Router();
 
 /* Definition of the GET home page route */
 router.get('/', function(req, res, next) {
-  res.render('index', { title: 'Fleet Insurance Cost Calculator' });
+  res.render('index', {
+    title: 'Fleet Insurance Cost Calculator',
+  });
 });
 
 /* Exporting the router from this module so that it can be used and imported from other modules */

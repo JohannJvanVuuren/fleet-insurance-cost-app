@@ -1,27 +1,55 @@
-extends layout
-
-block content
-  div.global-container
-    div.index-container
-      h1.heading-title= title
-      p This application calculates the total fleet insurance cost based on the individual kilometers driven entered.
-      form(
-        action='/individualVehicle'
-        method='POST'
-        class='form-kilometers'
-      )
-        label(for='kilometers') Individual Vehicle Kilometers Driven (X to stop)
-          input(
+doctype html
+html
+  head
+    title= title
+    link(rel='stylesheet', href='/scss/main.css')
+  body
+    div.global-container
+      div.index-container
+        h1.heading-title= title
+        p This application calculates the total fleet insurance cost based on the individual kilometers driven entered.
+        form(
+          action='/fleetInsuranceCost'
+          method='POST'
+          class='form-kilometers'
+        )
+          helmet
+            script.
+              document.getElementById('kilometerInput').value = '';
+          input#kilometerInput(
             type='text'
-            id='kilometers'
             name='kilometers'
             class='form-input'
-            placeholder='Kilometers'
+            placeholder='Kilometers Per Individual Vehicle'
+            onfocus="this.value=''"
           )
-          input(
+          input#button-submit(
             type='submit'
+            class='button-submit'
+            onclick='clearInput()'
           )
-      h1.heading-results Total Insurance Due
-      div.result-box
-        h2= result
-
+        div.buttons-executive
+          form(
+            action='/fleetInsuranceCost'
+            method='GET'
+            class='form-calculate'
+          )
+            input(
+              type='submit'
+              value='Calculate'
+              class='button-calculate'
+            )
+          form(
+            action='/clearApplication'
+            method='DELETE'
+            class='form-clear'
+          )
+            input(
+              type='submit'
+              value='Clear'
+              class='button-delete'
+              onclick='resetResult()'
+            )
+        h1.heading-results Total Insurance Due
+        div.result-box
+          h2= result

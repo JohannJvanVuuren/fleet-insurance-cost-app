@@ -4,6 +4,7 @@
 /* Import to enable use of variables */ /* Color schema */
 /* Blues */
 /* Reds */
+/* Yellow */
 /* Shadows */
 /* Global reset */
 *,
@@ -21,18 +22,28 @@ html {
 
 /* Global styling of the body element of the views */
 body {
-  padding: 50px;
+  background: linear-gradient(to bottom right, #000015, #00003D, #0101ca) no-repeat;
+  color: #C6C6FF;
   font-family: "Lato", Helvetica, Arial, sans-serif;
   font-size: 2.5rem;
-  background-color: #000015;
-  color: #C6C6FF;
+  min-height: 100vh;
+  padding: 50px;
   position: relative;
 }
 
 /* Color schema */
 /* Blues */
 /* Reds */
+/* Yellow */
 /* Shadows */
+.index-container {
+  /* Typography of the main heading of the page */
+  /* Typography of the descriptive paragraph of the application */
+  /* Setting of the size of the input fields placeholder text */
+  /* Setting of the color of the placeholder text */
+  /* The typography of the end result field text*/
+  /* Typography of the heading of the result field */
+}
 .index-container .heading-title {
   font-size: 6rem;
   font-weight: 100;
@@ -41,66 +52,96 @@ body {
 .index-container p {
   font-size: 2rem;
 }
-.index-container label {
-  font-size: 3rem;
-  font-weight: 100;
-  text-transform: uppercase;
-}
 .index-container input {
   font-size: 2rem;
-  font-weight: 300;
-  text-align: center;
-  text-transform: uppercase;
 }
 .index-container ::placeholder {
-  color: rgba(0, 0, 0, 0.2);
+  color: rgba(0, 0, 0, 0.5);
+}
+.index-container .result-box h2 {
+  color: #500000;
 }
 .index-container .heading-results {
+  color: #FFFF00;
+  font-size: 4rem;
+  font-weight: 300;
+  letter-spacing: 2.5px;
   margin-top: 4rem;
-  font-size: 2rem;
-  color: #770000;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
   text-transform: uppercase;
 }
 
 /* Color schema */
 /* Blues */
 /* Reds */
+/* Yellow */
 /* Shadows */
+.index-container {
+  /* Styling of the input field */
+  /* Styling of the end result field */
+}
 .index-container input {
   background: #C6C6FF;
+  border: none;
   border-radius: 1rem;
   box-shadow: 1rem 1rem 3rem rgba(0, 0, 0, 0.8), -0.8rem -0.8rem 3rem #00003D;
-  border: none;
 }
 .index-container .result-box {
   background: #C6C6FF;
   box-shadow: 1rem 1rem 3rem rgba(0, 0, 0, 0.8), -0.8rem -0.8rem 3rem #00003D;
 }
 
+/* Layout of the global container */
 .global-container {
-  margin-top: 10rem;
+  /* Setting a margin from the top of the viewport */
+  margin-top: 8rem;
+  /* Layout of the main container of the elements of the main index.pug view */
 }
 .global-container .index-container {
+  align-items: center;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  /* Layout of the main form that takes in the individual kilometers per vehicle */
+  /* Layout, positioning and sizing of the end result field */
 }
 .global-container .index-container .form-kilometers {
-  display: flex;
-  flex-direction: column;
   align-items: center;
+  display: flex;
+  justify-content: space-between;
+  /* Layout and positioning of the main input field */
+  /* Sizing of the submit button */
 }
-.global-container .index-container input {
+.global-container .index-container .form-kilometers input {
+  margin: 3rem 0.5rem;
   outline: none;
-  padding: 2rem;
-  margin: 3rem 0;
-  width: 25%;
+  padding: 1rem 1.5rem;
+  text-align: center;
+  width: 35rem;
+}
+.global-container .index-container .form-kilometers .button-submit {
+  width: 10rem;
+}
+.global-container .index-container .buttons-executive {
+  display: flex;
+  width: 20rem;
+  justify-content: space-around;
+  align-items: center;
+  /* Sizing of the calculate button used to trigger a GET request to get the total fleet cost */
+}
+.global-container .index-container .buttons-executive .button-calculate {
+  padding: 1rem;
+}
+.global-container .index-container .buttons-executive .button-delete {
+  padding: 1rem;
 }
 .global-container .index-container .result-box {
-  width: 18rem;
-  height: 7rem;
-  margin: 3rem auto;
+  align-items: center;
   border-radius: 1rem;
+  display: flex;
+  height: 7rem;
+  justify-content: center;
+  margin: 3rem auto;
+  width: 18rem;
 }
 
 /*# sourceMappingURL=main.css.map */

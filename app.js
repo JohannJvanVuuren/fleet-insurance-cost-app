@@ -1,21 +1,25 @@
 const createError = require('http-errors');
 /* Imports the Express framework into the app */
 const express = require('express');
+/* Importing Helmet for app security */
+const helmet = require('helmet');
 /* Import of a core Node module for working with and handling paths */
 const path = require('path');
 /* Express middleware for handling of cookies */
 const cookieParser = require('cookie-parser');
 /* Import of express middleware to handle logging of request and responses */
 const logger = require('morgan');
-/* Adds a body object to a request when handling forms so that POST parameters can be accessed */
-const bodyParser = require('body-parser');
 
-/* Dummy pages to show the use of routing */
+/* Import of the route files and routes needed in the application */
 const indexRouter = require('./routes/index');
 const usersRouter = require('./routes/users');
-const individualVehicleRouter = require('./routes/individualVehicle');
+const fleetCostRouter = require('./routes/fleetInsuranceCost');
+const {contentSecurityPolicy} = require("helmet");
 
+/* Creation of an app instance */
 const app = express();
+
+
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
@@ -33,13 +37,26 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 /* Tells the app to use the public directory where images, stylesheets and scripts are stored */
 app.use(express.static(path.join(__dirname, 'public')));
+/* Enable Helmet middleware */
+
+const nonce = crypto.randomUUID();
+app.use(helmet());
+helmet.contentSecurityPolicy({
+  directives: {
+    scriptSrc: [
+        `'nonce-${nonce}'`,
+        "'strict-dynamic'",
+    ],
+  }
+})
+
+
 
 /* Two routing methods. Two parameters. The path and the function to execute. Routes are usually
 * seperated from app.js to keep this file lean and to the point */
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
-app.use('/', individualVehicleRouter);
-
+app.use('/', fleetCostRouter);
 
 
 // catch 404 and forward to error handler

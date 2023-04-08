@@ -17,10 +17,11 @@ html {
 
 /* Global styling of the body element of the views */
 body {
-  padding: 50px;
+  background: linear-gradient(to bottom right, $dark-blue, $middle-blue, $light-blue) no-repeat;
+  color: $misty-blue;
   font-family: 'Lato', Helvetica, Arial, sans-serif;
   font-size: 2.5rem;
-  background-color: $dark-blue;
-  color: $misty-blue;
+  min-height: 100vh;
+  padding: 50px;
   position: relative;
 }

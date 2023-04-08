@@ -2,44 +2,44 @@
 
 .index-container {
 
+  /* Typography of the main heading of the page */
   .heading-title {
     font-size: 6rem;
     font-weight: 100;
     text-transform: uppercase;
   }
 
+  /* Typography of the descriptive paragraph of the application */
   p {
     font-size: 2rem;
   }
 
-  label {
-    font-size: 3rem;
-    font-weight: 100;
-    text-transform: uppercase;
-  }
-
+  /* Setting of the size of the input fields placeholder text */
   input {
     font-size: 2rem;
-    font-weight: 300;
-    text-align: center;
-    text-transform: uppercase;
-
-
   }
 
+  /* Setting of the color of the placeholder text */
   ::placeholder {
-      color: $light-shadow;
+    color: $middle-shadow;
+
   }
 
+  /* The typography of the end result field text*/
   .result-box {
-
+    h2 {
+      color: $dark-red;
+    }
   }
 
+  /* Typography of the heading of the result field */
   .heading-results {
+    color: $primary-yellow;
+    font-size: 4rem;
+    font-weight: 300;
+    letter-spacing: 2.5px;
     margin-top: 4rem;
-    font-size: 2rem;
-    color: $middle-red;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
     text-transform: uppercase;
   }
-
 }
