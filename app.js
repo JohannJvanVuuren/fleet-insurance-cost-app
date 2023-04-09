@@ -9,17 +9,16 @@ const path = require('path');
 const cookieParser = require('cookie-parser');
 /* Import of express middleware to handle logging of request and responses */
 const logger = require('morgan');
+/* Import of Connect/Express middleware to be used to enable CORS */
+const cors = require('cors');
 
 /* Import of the route files and routes needed in the application */
 const indexRouter = require('./routes/index');
 const usersRouter = require('./routes/users');
 const fleetCostRouter = require('./routes/fleetInsuranceCost');
-const {contentSecurityPolicy} = require("helmet");
 
 /* Creation of an app instance */
 const app = express();
-
-
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
@@ -27,6 +26,10 @@ app.set('view engine', 'pug');
 
 /* app.use tells the app to use the parameters given to it. This could be a function or a path and a function */
 
+/* Enabling of the CORS enabling middleware */
+app.use(cors());
+/* Enabling of Helmet */
+app.use(helmet());
 /* Logger logs the request to the console. The dev format includes a lot of information about the request */
 app.use(logger('dev'));
 /* Gives the app the capability of parsing JSON */
@@ -37,20 +40,19 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 /* Tells the app to use the public directory where images, stylesheets and scripts are stored */
 app.use(express.static(path.join(__dirname, 'public')));
-/* Enable Helmet middleware */
-
-const nonce = crypto.randomUUID();
+/* Setting up Helmet as middleware */
 app.use(helmet());
+
+/* Implementation of Helmet CSP */
+const nonce = crypto.randomUUID();
 helmet.contentSecurityPolicy({
   directives: {
-    scriptSrc: [
-        `'nonce-${nonce}'`,
-        "'strict-dynamic'",
-    ],
+    "script-src": [`'nonce-${nonce}'`, 'strict-dynamic'],
+    "object-src": 'none',
+    "base-uri": 'none',
+    "Cross-Origin-Resource-Policy": 'same-site',
   }
 })
-
-
 
 /* Two routing methods. Two parameters. The path and the function to execute. Routes are usually
 * seperated from app.js to keep this file lean and to the point */

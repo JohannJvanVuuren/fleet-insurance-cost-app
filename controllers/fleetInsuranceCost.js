@@ -50,7 +50,12 @@ const calculateTotalCost = (req, res, next) => {
     /* Finally rendering the result to the index.pug view */
     res.render('index', {
         title: 'Fleet Insurance Cost Calculator',
-        result: totalFleetCost})
+        result: totalFleetCost
+    })
+
+
+
+
 
 }
 /* Delete the contents of the individualCostArray to reset the page. It send back a value of
@@ -64,8 +69,9 @@ const clearCostArray = (req, res, next) => {
 
     res.render('index', {
         title: 'Fleet Insurance Cost Calculator',
-        result: 0
+        result: ''
     })
+
 }
 
 /* Exporting both functions for use in the routes that were set up for collecting the individual kilometers

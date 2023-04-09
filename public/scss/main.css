@@ -49,8 +49,13 @@ body {
   font-weight: 100;
   text-transform: uppercase;
 }
-.index-container p {
+.index-container h2 {
   font-size: 2rem;
+  padding: 0.5rem;
+}
+.index-container p {
+  padding: 0.5rem;
+  font-size: 1.6rem;
 }
 .index-container input {
   font-size: 2rem;

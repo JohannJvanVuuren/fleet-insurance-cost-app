@@ -9,9 +9,15 @@
     text-transform: uppercase;
   }
 
+  h2 {
+    font-size: 2rem;
+    padding: 0.5rem;
+  }
+
   /* Typography of the descriptive paragraph of the application */
   p {
-    font-size: 2rem;
+    padding:0.5rem;
+    font-size: 1.6rem;
   }
 
   /* Setting of the size of the input fields placeholder text */
