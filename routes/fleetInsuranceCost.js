@@ -8,7 +8,8 @@ const express = require('express');
 const router = express.Router();
 
 /* Import of fleeInsuranceCost controller */
-const fleetInsuranceCostController = require('../controllers/fleetInsuranceCost');
+const fleetInsuranceCostController = require('../controllers/fleetInsuranceCostController');
+
 
 /* Route to take in POST request with the individual kilometers and pass them to the addCostToArray function */
 router.post('/fleetInsuranceCost', fleetInsuranceCostController.addCostToArray);

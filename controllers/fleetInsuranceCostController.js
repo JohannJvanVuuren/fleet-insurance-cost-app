@@ -29,6 +29,9 @@ const addCostToArray = (req, res, next) => {
     /* Finally the individual insurance cost is pushed to the array that was created for this purpose */
     individualCostArray.push(individualCost);
 
+    /* A return value to enable testing */
+    return individualCost;
+
 }
 
 /* The function that calculates the total cost of the fleet based on the array of individual cost
@@ -53,11 +56,8 @@ const calculateTotalCost = (req, res, next) => {
         result: totalFleetCost
     })
 
-
-
-
-
 }
+
 /* Delete the contents of the individualCostArray to reset the page. It send back a value of
 * 0.00 to render to the results section of the page */
 const clearCostArray = (req, res, next) => {

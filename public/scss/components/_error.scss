@@ -1,0 +1,13 @@
+/* Import to enable the use of variables */
+@import '../abstract/variables';
+
+/* Styling of the error message container and contents */
+.error-wrapper {
+
+  .error-flex-container {
+    box-shadow: 1rem 1rem 3rem $dark-shadow,
+    -0.8rem -0.8rem 3rem $middle-blue;
+    border-radius: 1rem;
+    padding: 2rem;
+  }
+}

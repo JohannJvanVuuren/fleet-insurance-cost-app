@@ -9,7 +9,7 @@ const assert = require('assert');
 
 /* Mocha test to ensure the default functionality created for http://localhost:300/users work as expected */
 /* The describe() functions to group tests together and describes what is being tested*/
-describe('Status and content', () => {
+describe('Status and content /users', () => {
     describe ('Users page', () => {
         /* The it() function that contains the code to execute to test if the status received back from
         * a call to the url below is 200 (I.e., success) */

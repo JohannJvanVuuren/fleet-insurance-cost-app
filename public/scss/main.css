@@ -38,6 +38,7 @@ body {
 /* Shadows */
 .index-container {
   /* Typography of the main heading of the page */
+  /* Typography of the secondary heading of the application main view */
   /* Typography of the descriptive paragraph of the application */
   /* Setting of the size of the input fields placeholder text */
   /* Setting of the color of the placeholder text */
@@ -76,6 +77,24 @@ body {
   text-transform: uppercase;
 }
 
+/* Typography of the error page message */
+.error-wrapper .error-flex-container {
+  color: #9F0000;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+}
+
+/* Import to enable the use of variables */ /* Color schema */
+/* Blues */
+/* Reds */
+/* Yellow */
+/* Shadows */
+/* Styling of the error message container and contents */
+.error-wrapper .error-flex-container {
+  box-shadow: 1rem 1rem 3rem rgba(0, 0, 0, 0.8), -0.8rem -0.8rem 3rem #00003D;
+  border-radius: 1rem;
+  padding: 2rem;
+}
+
 /* Color schema */
 /* Blues */
 /* Reds */
@@ -94,6 +113,20 @@ body {
 .index-container .result-box {
   background: #C6C6FF;
   box-shadow: 1rem 1rem 3rem rgba(0, 0, 0, 0.8), -0.8rem -0.8rem 3rem #00003D;
+}
+
+/* Layout of the error message container and contents */
+.error-wrapper {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.error-wrapper .error-flex-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 /* Layout of the global container */

@@ -9,6 +9,7 @@
     text-transform: uppercase;
   }
 
+  /* Typography of the secondary heading of the application main view */
   h2 {
     font-size: 2rem;
     padding: 0.5rem;
@@ -47,5 +48,14 @@
     margin-top: 4rem;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
     text-transform: uppercase;
+  }
+}
+
+/* Typography of the error page message */
+.error-wrapper {
+
+  .error-flex-container {
+    color:$light-red;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
   }
 }

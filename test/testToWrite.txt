@@ -1,0 +1,5 @@
+Testing of all routes
+
+Testing of the calculation functions
+
+Snapshot testing of the rendering of the index.pug view
